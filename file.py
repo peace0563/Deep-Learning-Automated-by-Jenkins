@@ -80,7 +80,7 @@ class Deeplearn:
         model.compile(loss = 'categorical_crossentropy',
                       optimizer = keras.optimizers.Adadelta(),
                       metrics = ['accuracy'])
-
+        
         history = model.fit(x_train, y_train,
                   batch_size=batch_size,
                   epochs=epochs,
@@ -96,6 +96,7 @@ class Deeplearn:
         g.write("Epoch: "+str(epochh))
         g.close()
         f.close()
+
 
         
 if __name__== '__main__':
